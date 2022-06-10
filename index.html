@@ -1,48 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>JAVASCRIPT CURSO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="./bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <form action="#">
-            <div class="row">
-                <div class="md-6">
-                    <label for="name" class="form-label">User name</label>
-                    <input type="text" id="name" placeholder="Ingrese nombre de usuario." class="form-control" name="userName" autofocus>
-                </div>
-                
-                <div class="md-6">
-                    <label for="mail" class="form-label">Email</label>
-                    <input type="email" id="mail" placeholder="Ingrese correo." class="form-control" name="correo">
-                </div>
-                
-                <div class="md-6">
-                    <label for="fono" class="form-label">Telefono</label>
-                    <input type="number" id="fono" placeholder="Ingrese numero de contacto." class="form-control" name="telefono">
-                </div>
-                
-                <div class="md-6">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="genero" id="generoFemenino" value="f">
-                        <label class="form-check-label" for="generoFemenino">Femenina</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="genero" id="generoMasculino" value="m" checked>
-                        <label class="form-check-label" for="generoMasculino">Masculino</label>
-                    </div>
-                </div>  
+        <div class="row">
+            <div class="col align-self-start">
+                <h1>Empleados almacenados</h1>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar datos</button>
-            <!-- <button class="enviar" id="btn-enviar">Enviar datos</button> -->
-            <button type="reset" class="btn btn-secondary">Limpiar</button>
-        </form>
+            <div class="col align-self-end">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar datos</button>
+            </div>    
+        </div>
+        
     </div>
-    
+   
+    <div class="container">
+        
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">nombre</th>
+                <th scope="col">correo</th>
+                <th scope="col">telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                </tr>
+                <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                </tr>
+                <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ingrese usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="row">
+                            <div class="md-6">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" id="name" placeholder="Nombre Jhon" class="form-control" name="nombre" autofocus>
+                            </div>
+                            <div class="md-6">
+                                <label for="lastName" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Apellido Bon Jovi" name="apellido" >
+                            </div>
+                            <div class="md-6">
+                                <label for="mail" class="form-label">Email</label>
+                                <input type="email" id="mail" placeholder="Ingrese correo." class="form-control" name="correo">
+                            </div>
+                            <div class="md-6">
+                                <label for="fono" class="form-label">Telefono</label>
+                                <input type="number" id="fono" placeholder="Ingrese numero de contacto." class="form-control" name="telefono">
+                            </div>
+                            
+                            <div class="md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="generoMasculino" value="m" checked>
+                                    <label class="form-check-label" for="generoMasculino">Masculino</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="generoFemenino" value="f">
+                                    <label class="form-check-label" for="generoFemenino">Femenina</label>
+                                </div>
+                            </div>  
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar y salir</button>
+                    <button type="button" class="btn btn-primary">Guardar datos</button>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <script src="./bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
 </body>
 </html>
