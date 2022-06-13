@@ -20,8 +20,7 @@
         
     </div>
    
-    <div class="container">
-        
+    <div id="contenedor-tabla" class="container">
         <table id="usuarios" class="table table-hover">
             <thead>
                 <tr>
@@ -29,6 +28,8 @@
                     <th scope="col">nombre</th>
                     <th scope="col">correo</th>
                     <th scope="col">telefono</th>
+                    <th scope="col">genero</th>
+                    <th scope="col">acciones</th>
                 </tr>
             </thead>
         </table>
@@ -43,7 +44,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="#">
+                    <form action="javascript:void(0)" name="usuarioForm">
                         <div class="row">
                             <div class="md-6">
                                 <label for="name" class="form-label">Nombre</label>
@@ -78,7 +79,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar y salir</button>
-                    <button type="submit" class="btn btn-primary submit" id="enviar" >Guardar datos</button>
+                    <button type="submit" class="btn btn-primary" id="enviar" >Guardar datos</button>
                 </div>
             </div>
         </div>
